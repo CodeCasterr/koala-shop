@@ -1,11 +1,11 @@
 @import url("drop.css");
-header div.header-main, header .header-hat {
+.header-bottom .header-bottom__container, header div.header-main, header .header-hat {
   width: 1270px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-header section.header-hat__section li a {
+header .header-register, header .header-number, header button, header section.header-hat__section li a {
   transition: all 0.3s ease;
 }
 
@@ -44,20 +44,16 @@ header .header-hat {
   display: flex;
   justify-content: space-between;
 }
-header ul {
+header .header-hat ul {
   display: flex;
   gap: 50px;
-}
-header ul li {
-  font-family: Nunito;
-  font-size: 10px;
-  font-weight: 800;
-  color: red;
 }
 header div.header-main {
   background-color: #FFF;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 21px 0;
 }
 header div.header-main div.brand-naming {
   flex: 1;
@@ -70,6 +66,129 @@ header div.header-main div.brand-naming p {
   font-size: 27px;
   font-weight: 700;
   color: var(--Blue, #3461E3);
+}
+header label {
+  position: relative;
+}
+header input {
+  background-color: var(--Blue-fone, #ECF4FF);
+  border-radius: 50px;
+  padding: 10px 0 10px 21px;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ADB2C1;
+  height: 100%;
+  min-width: 607px;
+}
+header button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--Blue, #3461E3);
+  min-width: 60px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+header button:after {
+  content: "";
+  background: url("/images/header-searchbar-glass.svg") no-repeat;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+}
+header button:hover {
+  opacity: 0.7;
+}
+header .header-number {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Blue, #3461E3);
+  position: relative;
+  padding-left: 38px;
+  padding-top: 5px;
+}
+header .header-number:before {
+  background: url("/images/header-phone.svg") no-repeat var(--Blue, #3461E3);
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  border-radius: 50px;
+  z-index: 4;
+}
+header .header-number:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--Blue, #3461E3);
+  border-radius: 50px;
+  content: "";
+  width: 28px;
+  height: 28px;
+}
+header .header-number:hover {
+  opacity: 0.7;
+}
+header .header-register {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  color: #606E78;
+  position: relative;
+  padding-left: 38px;
+  padding-top: 5px;
+}
+header .header-register:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--Blue, #3461E3);
+  border-radius: 50px;
+  content: "";
+  width: 28px;
+  height: 28px;
+}
+header .header-register:before {
+  content: "";
+  width: 12px;
+  height: 0;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background: url("/images/header-registration.svg") no-repeat;
+  padding: 8px;
+  border-radius: 50px;
+  z-index: 4;
+}
+header .header-register:hover {
+  opacity: 0.7;
+}
+
+.header-bottom {
+  background-color: var(--Blue, #3461E3);
+}
+.header-bottom .header-bottom__container {
+  padding-top: 24px;
+  padding-bottom: 26px;
+}
+.header-bottom .header-bottom__container ul {
+  display: flex;
+  gap: 43px;
+}
+.header-bottom .header-bottom__container ul a {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
 }
 
 /*# sourceMappingURL=output.css.map */

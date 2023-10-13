@@ -6,3 +6,11 @@
   }
   color: $color;
 }
+
+@mixin before-icon($width, $height){
+  content: "";
+  width: $width;
+  height: $height;
+
+
+}
