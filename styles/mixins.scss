@@ -1,0 +1,8 @@
+@mixin nunito-text($size, $weight, $color) {
+  font: {
+    family: Nunito;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}

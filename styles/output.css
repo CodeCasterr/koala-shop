@@ -1,0 +1,75 @@
+@import url("drop.css");
+header div.header-main, header .header-hat {
+  width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header section.header-hat__section li a {
+  transition: all 0.3s ease;
+}
+
+header {
+  background-color: #fff;
+}
+header section.header-hat__section {
+  width: 100%;
+  background-color: var(--Blue-fone, #ECF4FF);
+  padding: 8px;
+}
+header section.header-hat__section li a {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  color: #606E78;
+}
+header section.header-hat__section li a:hover {
+  opacity: 0.7;
+}
+header section.header-hat__section ul.lang-switcher {
+  display: flex;
+  gap: 5px;
+}
+header section.header-hat__section ul.lang-switcher li {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 400;
+  color: #606E78;
+}
+header section.header-hat__section ul.lang-switcher li:first-child:after {
+  content: "|";
+  margin-left: 5px;
+}
+header .header-hat {
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  gap: 50px;
+}
+header ul li {
+  font-family: Nunito;
+  font-size: 10px;
+  font-weight: 800;
+  color: red;
+}
+header div.header-main {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+header div.header-main div.brand-naming {
+  flex: 1;
+  max-width: 143px;
+  display: flex;
+  gap: 10px;
+}
+header div.header-main div.brand-naming p {
+  font-family: Nunito;
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--Blue, #3461E3);
+}
+
+/*# sourceMappingURL=output.css.map */

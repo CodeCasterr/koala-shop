@@ -1,0 +1,85 @@
+@import url("drop.css");
+@import "mixins.scss";
+@import "templates.scss";
+
+$back-color: var(--Blue-fone, #ECF4FF);
+$brand-color: var(--Blue, #3461E3);
+
+///////////////////////////////////////////////////////////////////////// @Mixins////////////////////////////////////
+
+//nunito-text - text-nunino-font (size-weight-color)
+//
+
+
+header {
+  background-color: #fff;
+
+
+  section.header-hat__section {
+    width: 100%;
+    background-color: $back-color;
+    padding: 8px;
+
+    li a {
+      @include nunito-text(14px, 400, #606E78);
+      @extend %transition;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+    }
+
+    ul.lang-switcher {
+      display: flex;
+      gap: 5px;
+
+      li {
+        @include nunito-text(14px, 400, #606E78)
+
+      }
+
+      li:first-child:after {
+        content: "|";
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .header-hat {
+    @extend %content-container;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  ul {
+    display: flex;
+    gap: 50px;
+
+    li {
+      @include nunito-text(10px, 800, red)
+    }
+  }
+
+  div.header-main {
+    @extend %content-container;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+
+    div.brand-naming {
+      flex: 1;
+      max-width: 143px;
+      display: flex;
+      gap: 10px;
+
+      p {
+        @include nunito-text(27px, 700, $brand-color)
+      }
+
+    }
+  }
+
+}
+
