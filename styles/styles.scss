@@ -79,118 +79,125 @@ header {
       }
 
     }
-  }
 
-  label {
-    position: relative;
-
-  }
-
-  input {
-    background-color: $back-color;
-    border-radius: 50px;
-    padding: 10px 0 10px 21px;
-    @include nunito-text(14px, 400, #ADB2C1);
-    height: 100%;
-    min-width: 607px;
-  }
-
-  button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: $brand-color;
-    min-width: 60px;
-    border: {
-      top-right-radius: 50px;
-      bottom-right-radius: 50px;
-    }
-    @extend %transition;
-    cursor: pointer;
-
-    &:after {
-      content: "";
-      background: url("/images/header-searchbar-glass.svg") no-repeat;
-      height: 12px;
-      width: 12px;
-      position: absolute;
-      right: 50%;
-      top: 50%;
-      transform: translateX(50%) translateY(-50%);
+    label {
+      position: relative;
+      flex: 1;
+      max-width: 607px;
+      padding-left: 15px;
     }
 
-    &:hover {
-      opacity: 0.7;
-    }
-
-  }
-
-  .header-number {
-    @include nunito-text(14px, 700, $brand-color);
-    position: relative;
-    padding-left: 38px;
-    padding-top: 5px;
-    @extend %transition;
-
-    &:before {
-      background: url("/images/header-phone.svg") no-repeat $brand-color;
-      @include before-icon(11px, 16px);
-      position: absolute;
-      left: 8px;
-      top: 8px;
+    input {
+      background-color: $back-color;
       border-radius: 50px;
-      z-index: 4;
-
+      padding: 10px 0 10px 21px;
+      @include nunito-text(14px, 400, #ADB2C1);
+      height: 100%;
+      //min-width: 607px;
+      width: 100%;
     }
 
-    &:after {
+    button {
       position: absolute;
-      left: 0;
+      right: 0;
       top: 0;
+      bottom: 0;
       background-color: $brand-color;
-      border-radius: 50px;
-      @include before-icon(28px, 28px);
+      min-width: 60px;
+      border: {
+        top-right-radius: 50px;
+        bottom-right-radius: 50px;
+      }
+      @extend %transition;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        background: url("/images/header-searchbar-glass.svg") no-repeat;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translateX(50%) translateY(-50%);
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
     }
 
-    &:hover {
-      opacity: 0.7;
+    .header-number {
+      @include nunito-text(14px, 700, $brand-color);
+      position: relative;
+      padding-left: 38px;
+      padding-top: 5px;
+      @extend %transition;
+      margin: 0 15px;
+
+      &:before {
+        background: url("/images/header-phone.svg") no-repeat $brand-color;
+        @include before-icon(11px, 16px);
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        border-radius: 50px;
+        z-index: 4;
+
+      }
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $brand-color;
+        border-radius: 50px;
+        @include before-icon(28px, 28px);
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .header-register {
+      @include nunito-text(14px, 400, #606E78);
+      position: relative;
+      padding-left: 38px;
+      padding-top: 5px;
+      @extend %transition;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $brand-color;
+        border-radius: 50px;
+        @include before-icon(28px, 28px);
+      }
+
+      &:before {
+        @include before-icon(12px, 0);
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        background: url("/images/header-registration.svg") no-repeat;
+        padding: 8px;
+        border-radius: 50px;
+        z-index: 4;
+
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 
-  .header-register {
-    @include nunito-text(14px, 400, #606E78);
-    position: relative;
-    padding-left: 38px;
-    padding-top: 5px;
-    @extend %transition;
 
-    &:after {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: $brand-color;
-      border-radius: 50px;
-      @include before-icon(28px, 28px);
-    }
-
-    &:before {
-      @include before-icon(12px, 0);
-      position: absolute;
-      left: 8px;
-      top: 8px;
-      background: url("/images/header-registration.svg") no-repeat;
-      padding: 8px;
-      border-radius: 50px;
-      z-index: 4;
-
-    }
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
 }
+
 
 .header-bottom {
   background-color: $brand-color;
@@ -200,6 +207,7 @@ header {
     padding-top: 24px;
     padding-bottom: 26px;
     display: flex;
+
     ul.header-bottom__categories,
     {
       display: flex;
@@ -220,6 +228,7 @@ header {
       display: flex;
       gap: 30px;
       flex: 1;
+      margin-right: 15px;
 
       li a {
         @include nunito-text(14px, 700, #FFF);
@@ -234,7 +243,6 @@ header {
     }
 
     .header-bottom__actions {
-
       display: flex;
       gap: 34px;
 
@@ -251,7 +259,7 @@ header {
           border-radius: 50px;
           color: black;
           position: absolute;
-          width: 13px;
+          min-width: 13px;
           height: 13px;
           top: 0;
           right: 0;
@@ -260,6 +268,7 @@ header {
           font-size: 8px;
           font-weight: 400;
           transform: translateX(50%);
+          padding: 0 1px;
         }
       }
 
@@ -285,8 +294,223 @@ header {
   }
 }
 
+section.enterance-bilboard {
+  @extend %content-container;
+  padding-top: 25px;
+
+  div {
+    width: 100%;
+    overflow: hidden;
+    max-height: 560px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+    }
+  }
+}
+
+.home-brands__sections {
+  @extend %content-container;
+  padding-top: 75px;
+
+  .home-brands__carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+
+    div.home-brands__carousel-item {
+      background-color: #ECF4FF;
+      border-radius: 40px;
+      width: 240px;
+      height: 190px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul.home-brands__carousel-navigation {
+      @extend %carousel-navigation;
+
+      li {
+        @extend %carousel-navigation__item;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  h3 {
+    @include nunito-text(34px, 700, #1F1F1F);
+    margin-bottom: 37px;
+  }
+}
 
 
+.home-categories {
+  @extend %content-container;
+  padding-top: 75px;
 
+  .home-categories__container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    div.home-categories-item {
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      @extend %transition;
+
+      & a:after {
+        content: attr(data-name);
+        position: absolute;
+        bottom: 25px;
+        left: 10px;
+        right: 10px;
+        background-color: #ECF4FF;
+        text-align: center;
+        @include nunito-text(21px, 700, $brand-color);
+        padding: 8px 0;
+        border-radius: 12px;
+      }
+
+      & a svg {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        background-color: $brand-color;
+        z-index: 2;
+        width: 35px;
+        height: 35px;
+        padding: 7px 12px 9px;
+        border-radius: 50px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.home-products__new-section {
+  @extend %content-container;
+  padding-top: 75px;
+
+  h3 {
+    @include nunito-text(34px, 700, #1F1F1F);
+  }
+
+  .home-products__cats-list {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+
+    & li a {
+      @include nunito-text(15px, 400, #606E78);
+      @extend %transition;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $brand-color;
+      }
+    }
+  }
+
+  .home-products__new-carousel {
+    display: flex;
+    gap: 20px;
+    padding-top: 28px;
+    position: relative;
+
+    & > a.single-product {
+      padding: 20px;
+      border-radius: 30px;
+      border: 1px solid var(--Line, #E0E7F1);
+      background: #FFF;
+      width: 295px;
+      height: 455px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      @extend %transition;
+
+      & div.single-product__thumbnail-container {
+        width: 100%;
+        height: 230px;
+        padding: 24px 27px 4px;
+        overflow: hidden;
+        //background-color: #E0E7F1;
+        border-radius: 30px;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      div.single-product__ratings {
+        margin-top: 13px;
+        width: 90px;
+        height: 14px;
+        background-color: #FFC107;
+      }
+
+      p.sing-product__content {
+        @include nunito-text(15px, 700, #1f1f1f);
+        margin-top: 12px;
+      }
+
+      span.single-product__price {
+        @include nunito-text(15px, 700, $brand-color);
+        margin-top: 26px;
+
+      }
+
+      button.single-product__btn {
+        background-color: $brand-color;
+        @include nunito-text(13px, 400, #FFF);
+        margin-top: 11px;
+        padding: 13px 63px;
+        border-radius: 20px;
+        @extend %transition;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .products-new__carousel-navigation {
+      @extend %carousel-navigation;
+
+      li {
+        @extend %carousel-navigation__item;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+      }
+
+    }
+
+  }
+}
 
 

@@ -9,3 +9,23 @@
   transition: all 0.3s ease;
 }
 
+%carousel-navigation{
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  top: -73px;
+  right: 18px;
+}
+
+%carousel-navigation__item{
+  border-radius: 50px;
+  width: 35px;
+  display: flex;
+  height: 35px;
+  background-color: #F3F3F3;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @extend %transition;
+
+}
